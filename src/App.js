@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import React,{useState,useEffect} from 'react';
 import './App.css';
+import Navbar from './components/Navbar/Navbar';
+import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 
 function App() {
+  const [loading,setLoading]=useState(false);
+  useEffect(()=>{
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 2000);
+  },[])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      {loading  ? <div className="load"><ClimbingBoxLoader className="load"
+ color={"#64ffda"} 
+      loading={loading} 
+       size={30} /></div>
+      :
+     <Navbar /> }
+      
     </div>
   );
 }
