@@ -21,7 +21,7 @@ import "./Navbar.css"
                 <h1 className="navbar-logo">
                     S
                 </h1>
-                <div className="menu-icon" onClick={clicked}>
+                <div className="menu-icon" onClick={()=>setClicked(!clicked)}>
                     <i className={clicked ?'fas fa-times':"fas fa-bars"}></i>
 
                 </div>
