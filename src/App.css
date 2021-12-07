@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Source Code Pro', monospace;
+  font-family: var(--font-sans);
 }
 .load{
   background: var(--navy);
@@ -26,5 +26,164 @@
   --green: #64ffda;
   --green-tint: rgba(100,255,218,0.1);
   --pink: #f57dff;
-  --blue: #57cbff
+  --blue: #57cbff;
+  --font-sans: "Calibre","Inter","San Francisco","SF Pro Text",sans-serif;
+    --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+}
+body{
+  background: var(--navy);
+  color: var(--slate);
+}
+.heading{
+  color: var(--lightest-slate);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  white-space: nowrap;
+  margin: 10px 0 40px;
+  font-family: var(--font-mono);
+
+}
+.heading::after{
+  content: "";
+  display: block;
+  position: relative;
+  background: var(--lightest-navy);
+  width: 300px;
+  height: 1px;
+  margin-left: 20px;
+
+
+}
+.AboutContent{
+  color: var(--slate);
+  align-items: center;
+  padding: 15px 20px 0px 0;
+}
+.container{
+  
+  margin: 0 auto;
+  padding-top: 100px ;
+  padding-bottom: 0;
+  max-width: 1000px;
+  align-items: center;
+  justify-content:center ;
+}
+img{
+  padding: 10px;
+}
+.img-responsive{
+  padding-top:10px;
+  border: 3px solid #64ffda;
+  float: right;
+  left: 50px;
+  opacity: 0.7;
+}
+.skill{
+  position: relative;
+  color: var(--slate);
+  margin: 10px;
+  list-style: none;
+}
+.skill::before{
+  content: "▹";
+  padding-right: 2px;
+  align-items: center;
+  color: var(--green);
+}
+.SkillsList{
+  display: grid;
+  grid-template-columns: repeat(2,minmax(140px,200px));
+}
+.highlight{
+  color: var(--green);
+}
+.name{
+  font-size: 70px;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  color: var(--lightest-slate);
+}
+.defis{
+  color: var(--slate);
+  font-size: 70px;
+}
+.container{
+  height:90vh;
+}
+.typed-cursor{
+  font-size: 70px;
+}
+#contact{
+  display: flex;
+}
+.row{
+  padding: 10px;
+  font-size: 14px; 
+  width: fit-content;
+}
+.head{
+  padding: 10px;
+}
+.sub-title{
+  padding: 5px 21px;
+}
+.contact-content{
+  width: 50%;
+}
+i{
+  font-size: 20px;
+}
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+  
+}
+#contact .contact-content .column{
+  width: calc(50% - 30px);
+}
+
+
+#contact .right form .fields{
+  display: flex;
+  margin: 2px 0;
+ 
+}
+
+#contact .right form .textarea{
+  height: 80px;
+  width: 100%;
+}
+
+#contact .right form .field input,
+#contact .right form .textarea textarea{
+  height: 80%;
+  width: 100%;
+  border: 1px solid ;
+  border-radius: 6px;
+  outline: none;
+  padding: 8px;
+  margin: 3px;
+  font-size: 13px;
+  background-color:var(--lightest-slate);
+  color: var(--navy);
+  transition: all 0.3s ease;
+}
+#contact .right form .field input:focus,
+#contact .right form .textarea textarea:focus{
+  border-color: #8892b0;
+}
+#contact .right form .textarea textarea{
+padding-top: 10px;
+resize: none;
+}
+#contact .right form .button-area{
+display: flex;
+align-items: center;
+padding-top: 10px;
+}
+.text{
+  margin: 5px;
 }

@@ -10,7 +10,7 @@ import "./Navbar.css"
 //     }
 
     export default function Header(){
-        const[clicked,setClicked]=useState(true);
+        const[clicked,setClicked]=useState(false);
         const handleClick=()=>{
             setClicked(!clicked);
 

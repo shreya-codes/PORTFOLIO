@@ -12,6 +12,7 @@
     counter-reset: item 0;
     z-index: 12;
     height: 70px;
+    font-size: 0.875rem;
 }
 .navbar-logo{
     color:var(--green) ;
@@ -28,7 +29,6 @@
 }
 .nav-menu{
     display: flex;
-    
     list-style: none;
     text-align: center;
     -webkit-box-pack: justify;
@@ -45,6 +45,8 @@
 }
 .nav-links{
     color: var(--lightest-slate);
+    letter-spacing: 0.15rem;
+
     text-decoration: none;
     padding: 0.5rem 1rem;
 }
@@ -97,6 +99,7 @@
     }
    
     .menu-icon{
+        color: var(--green);
         display: block;
         position: absolute;
         top: 0;
